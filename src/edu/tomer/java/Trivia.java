@@ -26,6 +26,9 @@ public class Trivia {
     }
 
     void showQuestion(){
+        if (!question.endsWith("?")){
+            question+="?";
+        }
         System.out.println(question);
     }
 

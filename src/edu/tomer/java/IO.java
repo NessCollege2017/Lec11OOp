@@ -73,6 +73,8 @@ public class IO {
     }
 
     static String getString(String prompt){
+        if (!prompt.endsWith(":"))
+            prompt+=":";
         System.out.println(prompt);
         return scan.next();
     }
