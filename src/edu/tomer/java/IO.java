@@ -77,6 +77,11 @@ public class IO {
         return scan.next();
     }
 
+    static String getSentence(String prompt){
+        System.out.println(prompt);
+        return scan.nextLine();
+    }
+
     static int[] getIntArray(String prompt){
         //ask the user for the size:
         int n = getInt("Enter the array size");
@@ -88,6 +93,15 @@ public class IO {
         }
         return result;
     }
+
+   static String[] getStringArray(String message, int size){
+       String[] result = new String[size];
+       for (int i = 0; i < result.length; i++) {
+           System.out.println(message);
+           result[i] = scan.next();
+       }
+       return result;
+   }
 
     static int[][] getIntArraydbl() {
         int size = IO.getInt("Enter the array size", 0);

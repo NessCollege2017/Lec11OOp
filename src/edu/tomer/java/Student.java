@@ -18,7 +18,7 @@ public class Student {
     int age; //Date
 
     //Constructor
-    public Student(String firstName, String lastName, String socialID, String phone, String email, String address, int age) {
+     Student(String firstName, String lastName, String socialID, String phone, String email, String address, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.socialID = socialID;
@@ -27,6 +27,17 @@ public class Student {
         this.address = address;
         this.age = age;
     }
+    //Empty constructor
+    Student(){
+        this.firstName = IO.getString("Enter your Name:");
+        this.lastName = IO.getString("Enter your last Name:");
+        this.socialID = IO.getString("Enter Social ID:");
+        this.phone = IO.getString("Enter Phone:");
+        this.email = IO.getString("Enter Email:");
+        this.address = IO.getString("Enter Address");
+        this.age = IO.getInt("Enter age:");
+    }
+
     void sayYourName(){
         System.out.println(firstName + " " + lastName);
     }
